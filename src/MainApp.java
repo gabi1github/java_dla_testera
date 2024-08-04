@@ -1,20 +1,20 @@
+import computer.Laptop;
+import computer.PC;
+import model.Bug;
+
 public class MainApp {
-    
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        Bug bug1 = new Bug("testowyopisbledu1", "testowyemail1", 2);
+        PC officeComputer = new PC("Office computer", "HP", 500, 128, false);
+        Laptop gamingLaptop = new Laptop("Gaming", "HP", 500, 500);
 
-        bug1.getFullInfo();
-        bug1.getEmail();
-        bug1.getStatus();
-        int priority = bug1.getPriority();
-        System.out.println(priority);
+        officeComputer.switchOn();
+        System.out.println(officeComputer.getState());
 
-        bug1.status = false;
-        bug1.getStatus();
+        gamingLaptop.switchOn();
+        System.out.println(gamingLaptop.getState());
+
+
 
     }
-
-
-
 }
